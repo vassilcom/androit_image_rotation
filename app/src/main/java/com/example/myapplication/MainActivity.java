@@ -17,9 +17,12 @@ import com.example.myapplication.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.RotateAnimation;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
+    ImageView vas_2IM;
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
 
@@ -35,6 +38,18 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+
+        vas_2IM = findViewById(R.id.vas_2im);
+        vas_2IM.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RotateAnimation rotateAnimation = new RotateAnimation(0,360,
+                        RotateAnimation.RELATIVE_TO_SELF, 0.5f,
+                        RotateAnimation.RELATIVE_TO_SELF,0.5f);
+                rotateAnimation.setDuration(1000);
+                vas_2IM.startAnimation(rotateAnimation);
+            }
+        });
 
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override

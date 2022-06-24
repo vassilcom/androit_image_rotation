@@ -35,14 +35,14 @@
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/vas_1im"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/cat1"
         android:contentDescription="TODO" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/vas_2im"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_anchor="@+id/include"
