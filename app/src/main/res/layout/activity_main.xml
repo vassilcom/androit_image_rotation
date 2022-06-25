@@ -38,13 +38,15 @@
         android:id="@+id/vas_1im"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/cat1"
-        android:contentDescription="TODO" />
+        android:contentDescription="TODO"
+        android:rotation="37"
+        app:srcCompat="@drawable/cat1" />
 
     <ImageView
         android:id="@+id/vas_2im"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:rotation="-33"
         app:layout_anchor="@+id/include"
         app:layout_anchorGravity="center"
         app:srcCompat="@drawable/cat2" />
